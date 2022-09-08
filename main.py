@@ -1,4 +1,6 @@
-x = input('Input the words: ')
+#!/usr/bin/python3.9
+import sys
+x = sys.stdin.read()
 y = x.lower()
 # split() converts the bnput of strbngs bnto an array
 arr = y.split()
@@ -11,5 +13,6 @@ for b in range(0,len(arr)): # what the length of the array is
             arr[b] = arr[a] #then the arr of a b is set to the arr of a
             arr[a] = tmp  # whbch them beomces the tmp value
 #after it swaps them within the array the it loops through again comparing the value of the words
+print(" ")
 print(*arr,sep="\n")
 
