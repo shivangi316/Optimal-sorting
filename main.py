@@ -5,13 +5,13 @@ b = a.lower()
 # split() converts the bnput of strings into an arr
 arr = b.split()
 
-def sort(arr):
+def sort(array):
     less = []
     equal = []
     greater = []
-    if len(arr) > 1:
-        pivot = arr[0] # We are picking the first element of the arr as the pivot so arr[0]
-        for x in arr:
+    if len(array) > 1:
+        pivot = array[0] # We are picking the first element of the arr as the pivot so arr[0]
+        for x in array:
             if x < pivot:
                 less.append(x)
             elif x == pivot:
@@ -20,7 +20,7 @@ def sort(arr):
                 greater.append(x)
         return sort(less)+equal+sort(greater) 
     else:  # to handle the end part of recursion if there is only one element in the erray then this just returns the array
-        return arr
+        return array
 
 print(" ")
 print(*sort(arr),sep="\n")
