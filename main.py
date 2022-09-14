@@ -13,6 +13,19 @@ arr = b.split()
 #             arr[i] = arr[j]
 #             arr[j] = tmp
 
+# def sort3(array, size):
+#     for index in range(size):
+#         min_index = index
+
+#         for j in range(index + 1, size):
+# select the minimum element in every iteration
+#             if array[j] < array[min_index]:
+#                 min_index = j
+# swapping the elements to sort the array
+#         (array[index], array[min_index]) = (array[min_index], array [index])
+# size = len(arr)
+# sort3(arr, size)
+
 def sort2(arr):
     if len(arr) > 1: #len is measuring the length of the array
         # Finding the mid of the array
