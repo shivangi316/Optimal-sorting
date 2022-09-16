@@ -26,55 +26,55 @@ arr = b.split()
 # size = len(arr)
 # sort3(arr, size)
 
-def sort2(arr):
-    if len(arr) > 1: #len is measuring the length of the array
-        # Finding the mid of the array
-        middle = len(arr)//2
-        # Dividing the array elements
-        x = arr[:middle] # left side
-        y = arr[middle:] # right side
-        # Sorting the first half
-        sort2(x)
-        # Sorting the second half
-        sort2(y)
-        i=j=k=0 # setting all the index values that are going to be used to 0, i & j are being just for temporary arrays while k is being used for the array we are going to use
+# def sort2(arr):
+#     if len(arr) > 1: #len is measuring the length of the array
+#         # Finding the mid of the array
+#         middle = len(arr)//2
+#         # Dividing the array elements
+#         x = arr[:middle] # left side
+#         y = arr[middle:] # right side
+#         # Sorting the first half
+#         sort2(x)
+#         # Sorting the second half
+#         sort2(y)
+#         i=j=k=0 # setting all the index values that are going to be used to 0, i & j are being just for temporary arrays while k is being used for the array we are going to use
         
-        # Copy data to temporary arrays x[] and y[]
-        while i < len(x) and j < len(y):
-            if x[i] < y[j]:
-                arr[k] = x[i]
-                i += 1
-            else: #if y[j] < x[i]
-                arr[k] = y[j]
-                j += 1
-            k += 1 # at the end of the while statement not the if & else statement
-         # Checking if any element was left unsorted
-        while i < len(x):
-            arr[k] = x[i]
-            i += 1
-            k += 1
-        while j < len(y):
-            arr[k] = y[j]
-            j += 1
-            k += 1
-sort2(arr)
+#         # Copy data to temporary arrays x[] and y[]
+#         while i < len(x) and j < len(y):
+#             if x[i] < y[j]:
+#                 arr[k] = x[i]
+#                 i += 1
+#             else: #if y[j] < x[i]
+#                 arr[k] = y[j]
+#                 j += 1
+#             k += 1 # at the end of the while statement not the if & else statement
+#          # Checking if any element was left unsorted
+#         while i < len(x):
+#             arr[k] = x[i]
+#             i += 1
+#             k += 1
+#         while j < len(y):
+#             arr[k] = y[j]
+#             j += 1
+#             k += 1
+# sort2(arr)
 
-# def sort(array):
-#     less = []
-#     equal = []
-#     greater = []
-#     if len(array) > 1:
-#         pivot = array[0] # We are picking the first element of the arr as the pivot so arr[0]
-#         for x in array:
-#             if x < pivot:
-#                 less.append(x)
-#             elif x == pivot:
-#                 equal.append(x)
-#             elif x > pivot:
-#                 greater.append(x)
-#         return sort(less)+equal+sort(greater) 
-#     else:  # to handle the end part of recursion if there is only one element in the erray then this just returns the array
-#         return array
+def sort(array):
+    less = []
+    equal = []
+    greater = []
+    if len(array) > 1:
+        pivot = array[0] # We are picking the first element of the arr as the pivot so arr[0]
+        for x in array:
+            if x < pivot:
+                less.append(x)
+            elif x > pivot:
+                greater.append(x)
+            elif x == pivot:
+                equal.append(x)
+        return sort(less)+equal+sort(greater) 
+    else:  # to handle the end part of recursion if there is only one element in the erray then this just returns the array
+        return array
 
 print(" ")
-print(*arr,sep="\n")
+print(*sort(arr),sep="\n")
