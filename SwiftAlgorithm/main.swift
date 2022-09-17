@@ -1,7 +1,7 @@
 //CHECKS: letter to number,  letter to number set, compare words, choosepivot all perform as expected
 //check partition and quicksort
 
-
+//FIND OUT HOW TO FIX IT CRASHING WITH TWO WORD INPUT
 
 
 //if let line = readLine() {
@@ -144,7 +144,7 @@ func choosePivot(array: inout [String], leftBound: Int, rightBound: Int)  { //th
 func partition(array: inout [String], leftBound: Int, rightBound: Int) -> (Int) {
     choosePivot(array: &array, leftBound: leftBound, rightBound: rightBound)
 
-    var itemFromLeft = 0
+    var itemFromLeft = leftBound
     var itemFromRight = rightBound - 1
     var indexToReturn = 0    
 
